@@ -3,3 +3,10 @@
 ################################################################################
 
 /ServerWithPlugins/.vs/ServerWithPlugins/v15
+/ServerWithPlugins/LinkedLibrary/bin/Debug/netcoreapp2.0
+/ServerWithPlugins/LinkedLibrary/obj
+/ServerWithPlugins/RuntimePlugin/bin/Debug/netcoreapp2.0
+/ServerWithPlugins/RuntimePlugin/obj
+/ServerWithPlugins/ServerWithPlugins/bin/Debug/netcoreapp2.0
+/ServerWithPlugins/ServerWithPlugins/obj
+/ServerWithPlugins/ServerWithPlugins.v3.ncrunchsolution.user

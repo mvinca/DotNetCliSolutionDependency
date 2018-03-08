@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LinkedLibrary\LinkedLibrary.csproj" />
+  </ItemGroup>
+  
+  <Target Name="Organize Deployment" AfterTargets="Publish">
+    <Message Text="Copying Plug-ins for $(Configuration)" Importance="high" />
+    <ItemGroup>
+      <PluginFiles Include="../RuntimePlugin/bin/Debug/netcoreapp2.0/publish/*.dll" />
+    </ItemGroup>
+    <Message Text="Copying Plug-ins @(PluginFiles) for $(Configuration)" Importance="high" />
+    <Copy SourceFiles="@(PluginFiles)" DestinationFolder="bin\$(Configuration)\netcoreapp2.0\publish\plugins\%(RecursiveDir)" SkipUnchangedFiles="true" />
+  </Target>
+</Project>
